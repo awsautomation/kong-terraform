@@ -17,7 +17,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy-host-count" {
 
   dimensions = {
     "TargetGroup"  = "${element(split(":", var.target_group), 5)}"
-    "LoadBalancer" = "${var.load_balancer}"
+   # "LoadBalancer" = "${var.load_balancer}"
   }
 }
 
